@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDataSourceStorage">
+    <option name="dataSources">
+      <list>
+        <State>
+          <option name="id" value="372fed01-1e51-4388-b2ef-a4162181cb00" />
+          <option name="name" value="InsertDataInGarageTables" />
+          <option name="languageId" value="GenericSQL" />
+          <option name="urls">
+            <array>
+              <option value="file://$USER_HOME$/Downloads/УП Практическая работа 2.5/¦г¦Я ¦ЯTА¦-¦¦TВ¦¬TЗ¦¦TБ¦¦¦-TП TА¦-¦-¦-TВ¦- 2.5/InsertDataInGarageTables.sql" />
+            </array>
+          </option>
+        </State>
+        <State>
+          <option name="id" value="214cb3bb-1695-4112-90b1-afffd3512e98" />
+          <option name="name" value="GarageQueryExample" />
+          <option name="languageId" value="GenericSQL" />
+          <option name="urls">
+            <array>
+              <option value="file://$USER_HOME$/Downloads/УП Практическая работа 2.5/¦г¦Я ¦ЯTА¦-¦¦TВ¦¬TЗ¦¦TБ¦¦¦-TП TА¦-¦-¦-TВ¦- 2.5/GarageQueryExample.sql" />
+            </array>
+          </option>
+        </State>
+      </list>
+    </option>
+  </component>
+</project>
