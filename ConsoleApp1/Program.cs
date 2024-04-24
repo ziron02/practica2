@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 class Program
 {
@@ -23,21 +24,54 @@ class Program
 
         Console.WriteLine(count);
         */
-        
+
         /* 2 задание
-        int[] candidates = { 2, 5, 7, 3, 1, 7 };
-        int target = 10;
-        for (int i = 0; i < candidates.Length - 1; i++)
+        int[] candidates = { 10, 1, 2, 7, 6, 1, 5 };
+        int target = 8;
+
+        List<List<int>> result = FindCombinations(candidates, target);
+
+        Console.WriteLine("Result:");
+        foreach (var combination in result)
         {
-            for (int j = i + 1; j < candidates.Length; j++)
+            Console.Write("");
+            foreach (var num in combination)
             {
-                if (candidates[i] + candidates[j] == target)
-                {
-                    Console.WriteLine($"{candidates[i]} + {candidates[j]} = {target}");  
-                }
+                Console.Write(num + " ");
             }
+
+            Console.WriteLine("");
         }
-        */
+
+        static List<List<int>> FindCombinations(int[] candidates, int target)
+    {
+        List<List<int>> result = new List<List<int>>();
+        Array.Sort(candidates);
+        Backtrack(candidates, target, 0, new List<int>(), result);
+        return result;
+    }
+
+    static void Backtrack(int[] candidates, int target, int start, List<int> tempList, List<List<int>> result)
+    {
+        if (target == 0)
+        {
+            result.Add(new List<int>(tempList));
+            return;
+        }
+
+        for (int i = start; i < candidates.Length; i++)
+        {
+            if (i > start && candidates[i] == candidates[i - 1])
+                continue;
+
+            if (candidates[i] > target)
+                break;
+
+            tempList.Add(candidates[i]);
+            Backtrack(candidates, target - candidates[i], i + 1, tempList, result);
+            tempList.RemoveAt(tempList.Count - 1);
+        }
+    }*/
 
         /* 3 задание
         int[] nums = { 1, 1, 2, 3, 4, 5, 6 };
@@ -55,20 +89,5 @@ class Program
 
         Console.WriteLine(count);
         */
-        
-        
-        int[] candidates = { 2, 5, 7, 3, 1, 7 };
-        int target = 10;
-        for (int i = 0; i < candidates.Length - 1; i++)
-        {
-            for (int j = i + 1; j < candidates.Length; j++)
-            {
-                if (candidates[i] + candidates[j] == target)
-                {
-                    Console.WriteLine($"{candidates[i]} + {candidates[j]} = {target}");  
-                }
-            }
-        }
-        
     }
 }
